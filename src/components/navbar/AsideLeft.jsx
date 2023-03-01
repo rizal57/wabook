@@ -57,11 +57,19 @@ const AsideLeft = () => {
       url: '/halaman'
     }
   ];
+  const footerLinks = [
+    { url: 'privasi', text: 'Privasi' },
+    { url: 'ketentuan', text: 'Ketentuan' },
+    { url: 'iklan', text: 'Iklan' },
+    { url: 'pilihan-iklan', text: 'Pilihan Iklan' },
+    { url: 'cookie', text: 'Cookie' },
+    { url: 'lainnya', text: 'Lainnya' }
+  ];
   return (
     <aside className="pl-2 col-span-1 overflow-y-auto h-screen pt-4 sticky top-[56px] w-[300px]">
       <div className="flex flex-col h-full">
         {links.map((link) => (
-          <Link to={link.url} className="box-equel aside-left">
+          <Link to={link.url} key={link.url} className="box-equel aside-left">
             {link.img && (
               <img
                 src={link.img}
@@ -80,18 +88,14 @@ const AsideLeft = () => {
 
         {/* footer */}
         <div className="flex gap-2 justify-start flex-wrap text-sm text-gray-500 leading-[10px] mt-4 px-2">
-          <Link to="/privasi">Privasi</Link>
-          &middot;
-          <Link to="/ketentuan">Ketentuan</Link>
-          &middot;
-          <Link to="/iklan">Iklan</Link>
-          &middot;
-          <Link to="/piihan-iklan">Piihan Iklan</Link>
-          &middot;
-          <Link to="/cookie">Cookie</Link>
-          &middot;
-          <Link to="/lainnya">Lainnya</Link>
-          &middot;
+          {footerLinks.map((link) => (
+            <>
+              <Link to={link.url} key={link.url}>
+                {link.text}
+              </Link>
+              &middot;
+            </>
+          ))}
           {/* copy right */}
           <span>Joule &copy; {year}</span>
         </div>
