@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.container {
+  @apply px-4;
+}
+
 .box-between {
   @apply flex items-center justify-between;
 }
@@ -22,6 +26,10 @@
   @apply flex items-center justify-end;
 }
 
-nav .active {
+header nav .active {
   @apply border-b-2 border-blue-500 rounded-none text-blue-500 hover:bg-transparent;
+}
+
+.aside-left {
+  @apply gap-2 font-semibold hover:bg-gray-200 transition-all duration-300 py-3 px-2 rounded-md;
 }
