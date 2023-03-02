@@ -1,14 +1,13 @@
 import React from 'react';
 import { BsSearch } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import Logo from '../../assets/wlogo.svg';
 
 const LeftItem = () => {
   return (
     <nav className="box-equel gap-x-2 col-span-1">
-      <Link
-        to="#"
-        className="box-center w-[40px] h-[40px] min-w-[40px] min-h-[40px] max-w-[40px] max-h-[40px] rounded-full bg-gradient-to-t from-blue-600 to-blue-300 text-white font-bold text-xl">
-        W
+      <Link to="#">
+        <img src={Logo} alt="Logo" />
       </Link>
 
       <div className="relative">

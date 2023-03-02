@@ -30,7 +30,7 @@ body {
   @apply flex items-center justify-end;
 }
 
-header nav .active {
+header nav .active, .story .active {
   @apply border-b-2 border-blue-500 rounded-none text-blue-500 hover:bg-transparent;
 }
 
@@ -53,4 +53,8 @@ aside::-webkit-scrollbar-thumb {
 
 aside:hover::-webkit-scrollbar-thumb {
   @apply visible;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, .5)
 }

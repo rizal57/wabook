@@ -1,9 +1,12 @@
+import clsx from 'clsx';
 import React from 'react';
 
-const Line = () => {
+const Line = (props) => {
+  const { padding = 'px-2', margin = 'mt-[10px]' } = props;
+
   return (
-    <div className="px-2">
-      <hr className="mt-[10px] border-gray-300" />
+    <div className={clsx(padding)}>
+      <hr className={clsx(margin, 'border-gray-300')} />
     </div>
   );
 };

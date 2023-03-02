@@ -1,7 +1,7 @@
 import React from 'react';
-import CenterItem from './header/CenterItem';
-import LeftItem from './header/LeftItem';
-import RightItem from './header/RightItem';
+import CenterItem from './CenterItem';
+import LeftItem from './LeftItem';
+import RightItem from './RightItem';
 
 const Header = () => {
   return (

@@ -1,14 +1,15 @@
 import React from 'react';
 import Line from '../Line';
 import Sponsor from '../Sponsor';
-import { BsCameraVideoFill, BsThreeDots } from 'react-icons/bs';
+import { BsThreeDots } from 'react-icons/bs';
+import { BiVideoPlus } from 'react-icons/bi';
 import { AiOutlineSearch } from 'react-icons/ai';
 import Person from '../Person';
 import ButtonCircle from '../ButtonCircle';
 
 const AsideRight = () => {
   const icons = [
-    { icon: BsCameraVideoFill },
+    { icon: BiVideoPlus },
     { icon: AiOutlineSearch },
     { icon: BsThreeDots }
   ];
@@ -30,9 +31,9 @@ const AsideRight = () => {
           <div className="box-center gap-2 text-gray-500">
             {icons.map((icon) => (
               <ButtonCircle
-                size="w-[32px] h-[32px] p-2"
+                size="w-[32px] h-[32px] p-1"
                 background="bg-transparent hover:bg-gray-200">
-                <icon.icon size={18} />
+                <icon.icon size={20} />
               </ButtonCircle>
             ))}
           </div>
