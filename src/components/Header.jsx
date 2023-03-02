@@ -6,7 +6,7 @@ import RightItem from './header/RightItem';
 const Header = () => {
   return (
     <header className="bg-white border-b border-gray-200 shadow-sm fixed inset-x-0 top-0 z-50">
-      <div className="container grid grid-cols-4 gap-3 h-[56px]">
+      <div className="mx-auto px-4 grid grid-cols-4 gap-3 h-[56px]">
         {/* left-item */}
         <LeftItem />
         {/* center-item */}

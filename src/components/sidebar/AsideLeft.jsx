@@ -7,6 +7,7 @@ import { FiClock } from 'react-icons/fi';
 import { BsFillBookmarkFill } from 'react-icons/bs';
 import { MdOutlineSpaceDashboard } from 'react-icons/md';
 import { AiFillFlag } from 'react-icons/ai';
+import Line from '../Line';
 
 const AsideLeft = () => {
   const year = new Date().getFullYear();
@@ -66,7 +67,7 @@ const AsideLeft = () => {
     { url: 'lainnya', text: 'Lainnya' }
   ];
   return (
-    <aside className="pl-2 col-span-1 overflow-y-auto h-screen pt-4 sticky top-[56px] w-[300px]">
+    <aside className="pl-2 col-span-1 overflow-y-auto h-screen pt-4 pb-16 sticky top-[56px] w-[300px]">
       <div className="flex flex-col h-full">
         {links.map((link) => (
           <Link to={link.url} key={link.url} className="box-equel aside-left">
@@ -82,9 +83,7 @@ const AsideLeft = () => {
           </Link>
         ))}
 
-        <div className="px-2">
-          <hr className="mt-[10px] border-gray-300" />
-        </div>
+        <Line />
 
         {/* footer */}
         <div className="flex gap-2 justify-start flex-wrap text-sm text-gray-500 leading-[10px] mt-4 px-2">

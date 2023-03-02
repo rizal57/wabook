@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  @apply px-4;
+body {
+  @apply text-gray-900;
 }
 
 .box-between {
@@ -22,6 +22,10 @@
   @apply flex items-center;
 }
 
+.box-start {
+  @apply flex items-start;
+}
+
 .box-end {
   @apply flex items-center justify-end;
 }
@@ -32,4 +36,21 @@ header nav .active {
 
 .aside-left {
   @apply gap-2 font-semibold hover:bg-gray-200 transition-all duration-300 py-3 px-2 rounded-md;
+}
+
+aside::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  @apply w-2;
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-t from-blue-500 to-blue-300 rounded-full;
+}
+
+aside::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full invisible;
+}
+
+aside:hover::-webkit-scrollbar-thumb {
+  @apply visible;
 }

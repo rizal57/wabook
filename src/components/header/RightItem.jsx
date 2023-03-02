@@ -2,6 +2,7 @@ import React from 'react';
 import { AiFillBell } from 'react-icons/ai';
 import { BsFillGridFill } from 'react-icons/bs';
 import { FaFacebookMessenger } from 'react-icons/fa';
+import ButtonCircle from '../ButtonCircle';
 
 const RightItem = () => {
   const icons = [
@@ -19,17 +20,17 @@ const RightItem = () => {
     <nav className="box-end gap-4">
       <div className="box-center gap-2">
         {icons.map((icon) => (
-          <button className="w-[40px] h-[40px] rounded-full bg-gray-200 hover:bg-gray-300 box-center">
+          <ButtonCircle>
             <icon.icon size={20} />
-          </button>
+          </ButtonCircle>
         ))}
-        <button className="w-[40px] h-[40px] rounded-full overflow-hidden bg-cover">
+        <ButtonCircle>
           <img
             src="https://picsum.photos/200"
             alt="profileImage"
             className="object-cover"
           />
-        </button>
+        </ButtonCircle>
       </div>
     </nav>
   );

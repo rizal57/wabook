@@ -1,5 +1,5 @@
 import React from 'react';
-import { AsideLeft } from '../components';
+import { AsideLeft, AsideRight } from '../components';
 
 const Home = () => {
   return (
@@ -7,7 +7,7 @@ const Home = () => {
       <div className="grid grid-cols-4 pt-[56px] top-0 w-full">
         {/* Aside Left */}
         <AsideLeft />
-        <div className="col-span-2 px-8">
+        <div className="col-span-2 px-8 max-w-lg mx-auto">
           <div>
             <h1>home</h1>
             <p>
@@ -131,7 +131,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="col-span-1">right</div>
+        <AsideRight />
       </div>
     </div>
   );
