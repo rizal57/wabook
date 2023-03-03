@@ -31,7 +31,7 @@ body {
 }
 
 header nav .active, .story .active {
-  @apply border-b-2 border-blue-500 rounded-none text-blue-500 hover:bg-transparent;
+  @apply border-b-[3px] border-blue-500 rounded-none text-blue-500 hover:bg-transparent;
 }
 
 .aside-left {

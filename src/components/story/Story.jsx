@@ -5,6 +5,7 @@ import { BiMoviePlay } from 'react-icons/bi';
 import { FaBookOpen } from 'react-icons/fa';
 import Card from '../Card';
 import Line from '../Line';
+import CreateStory from './CreateStory';
 import StoryItem from './StoryItem';
 
 const Story = () => {
@@ -39,11 +40,9 @@ const Story = () => {
             <div className="grid grid-cols-4 gap-x-2 relative">
               {state === 'Cerita' ? (
                 <>
-                  <StoryItem
-                    text={'M. Fahrur Rizal'}
-                    state={state}
-                    storyUrl="https://picsum.photos/200"
-                    profileImage={'https://picsum.photos/200'}
+                  <CreateStory
+                    url="/stories/create"
+                    profileImage="https://picsum.photos/200"
                   />
                   <StoryItem
                     text={'PUBG MOBILE'}

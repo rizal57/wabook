@@ -6,7 +6,7 @@ const StoryItem = (props) => {
   const { text, state, storyUrl, profileImage } = props;
   return (
     <>
-      <Link className="h-[200px] rounded-lg overflow-hidden object-cover bg-cover cursor-pointer group relative">
+      <Link className="h-[200px] rounded-lg overflow-hidden object-cover bg-cover cursor-pointer group relative shadow-md">
         {/* overlay */}
         <div className="bg-gray-900 absolute inset-x-0 inset-y-0 opacity-0 group-hover:opacity-10 z-40" />
         {/* profile image */}
@@ -25,7 +25,7 @@ const StoryItem = (props) => {
 
         {state === 'Cerita' ? (
           <div
-            className="w-full h-full group-hover:scale-110 transition duration-300"
+            className="w-full h-full group-hover:scale-105 transition duration-300"
             style={{
               backgroundImage: `url(${storyUrl})`
             }}
