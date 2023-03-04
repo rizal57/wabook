@@ -31,6 +31,7 @@ const AsideRight = () => {
           <div className="box-center gap-2 text-gray-500">
             {icons.map((icon) => (
               <ButtonCircle
+                key={icon.icon}
                 size="w-[32px] h-[32px] p-1"
                 background="bg-transparent hover:bg-gray-200">
                 <icon.icon size={20} />

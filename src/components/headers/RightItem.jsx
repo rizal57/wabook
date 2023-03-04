@@ -20,7 +20,7 @@ const RightItem = () => {
     <nav className="box-end gap-4">
       <div className="box-center gap-2">
         {icons.map((icon) => (
-          <ButtonCircle>
+          <ButtonCircle key={icon.icon}>
             <icon.icon size={20} />
           </ButtonCircle>
         ))}

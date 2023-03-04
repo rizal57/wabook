@@ -29,6 +29,7 @@ const CenterItem = () => {
       <div className="grid grid-cols-4 gap-x-2 w-full box-evenly">
         {links.map((link) => (
           <NavLink
+            key={link.url}
             to={link.url}
             className="box-center py-3 text-slate-600 rounded-md hover:bg-gray-200 w-full">
             <link.icon size={25} />

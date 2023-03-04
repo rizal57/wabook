@@ -14,7 +14,7 @@ const CreateStory = (props) => {
 
         {/* profile image */}
         <div
-          className="w-full h-full group-hover:scale-105 transition duration-300"
+          className="w-full h-full group-hover:scale-105 transition "
           style={{
             backgroundImage: `url(${profileImage})`
           }}

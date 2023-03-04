@@ -9,7 +9,7 @@ const Wrapper = (props) => {
     <Link
       {...props}
       to={url}
-      className="block p-2 rounded-md hover:bg-gray-200 transition duration-300 cursor-pointer">
+      className="block p-2 rounded-md hover:bg-gray-200 transition  cursor-pointer">
       <div className={clsx(className, 'gap-3')}>{children}</div>
     </Link>
   );

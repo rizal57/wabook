@@ -75,10 +75,10 @@ const AsideLeft = () => {
               <img
                 src={link.img}
                 alt="profileImage"
-                className="object-cover w-[24px] h-[24px] rounded-full overflow-hidden bg-cover flex-shrink-0"
+                className="object-cover w-[25px] h-[25px] rounded-full overflow-hidden bg-cover flex-shrink-0"
               />
             )}
-            {link.icon && <link.icon size={22} />}
+            {link.icon && <link.icon size={22} className="text-blue-500" />}
             {link.text}
           </Link>
         ))}
@@ -88,12 +88,9 @@ const AsideLeft = () => {
         {/* footer */}
         <div className="flex gap-2 justify-start flex-wrap text-sm text-gray-500 leading-[10px] mt-4 px-2">
           {footerLinks.map((link) => (
-            <>
-              <Link to={link.url} key={link.url}>
-                {link.text}
-              </Link>
-              &middot;
-            </>
+            <div key={link.url}>
+              <Link to={link.url}>{link.text} &nbsp;&middot;</Link>
+            </div>
           ))}
           {/* copy right */}
           <span>Joule &copy; {year}</span>

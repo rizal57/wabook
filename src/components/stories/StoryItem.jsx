@@ -25,14 +25,14 @@ const StoryItem = (props) => {
 
         {state === 'Cerita' ? (
           <div
-            className="w-full h-full group-hover:scale-105 transition duration-300"
+            className="w-full h-full group-hover:scale-105 transition "
             style={{
               backgroundImage: `url(${storyUrl})`
             }}
           />
         ) : (
           <div
-            className="w-full h-full group-hover:scale-110 transition duration-300"
+            className="w-full h-full group-hover:scale-105 transition "
             style={{
               backgroundImage: `url(${storyUrl})`
             }}

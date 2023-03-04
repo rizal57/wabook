@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply transition duration-200;
+}
 body {
   @apply text-gray-900;
 }
@@ -35,7 +38,7 @@ header nav .active, .story .active {
 }
 
 .aside-left {
-  @apply gap-2 font-semibold hover:bg-gray-200 transition-all duration-300 py-3 px-2 rounded-md;
+  @apply gap-2 font-semibold hover:bg-gray-200 transition-all  py-3 px-2 rounded-md;
 }
 
 aside::-webkit-scrollbar,
