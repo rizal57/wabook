@@ -1,5 +1,5 @@
 import React from 'react';
-import Wrapper from './Wrapper';
+import Wrapper from './LinkWrapper';
 
 const Person = () => {
   return (
@@ -14,7 +14,7 @@ const Person = () => {
           {/* circle */}
           <div className="w-[10px] h-[10px] rounded-full bg-green-500 absolute bottom-0 right-0 border-[2px] border-gray-100"></div>
         </div>
-        <div>M. Fahrur Rizal</div>
+        <p>M. Fahrur Rizal</p>
       </div>
     </Wrapper>
   );

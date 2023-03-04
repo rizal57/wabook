@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import React from 'react';
+import { forwardRef } from 'react';
 
-const ButtonCircle = (props) => {
+const ButtonCircle = forwardRef((props, ref) => {
   const {
     children,
     size = 'w-[40px] h-[40px]',
@@ -9,15 +9,16 @@ const ButtonCircle = (props) => {
   } = props;
   return (
     <button
+      ref={ref}
       {...props}
       className={clsx(
         size,
         background,
-        'rounded-full box-center overflow-hidden object-cover bg-cover'
+        'rounded-full box-center overflow-hidden object-cover bg-cover transition-all duration-200'
       )}>
       {children}
     </button>
   );
-};
+});
 
 export default ButtonCircle;

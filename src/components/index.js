@@ -1,7 +1,7 @@
 export { default as Header } from './headers/Header';
 export { default as AsideLeft } from './sidebars/AsideLeft';
 export { default as AsideRight } from './sidebars/AsideRight';
-export { default as Wrapper } from './Wrapper';
+export { default as LinkWrapper } from './LinkWrapper';
 export { default as Line } from './Line';
 export { default as Person } from './Person';
 export { default as ButtonCircle } from './ButtonCircle';
