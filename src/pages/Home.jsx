@@ -1,14 +1,36 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
   AsideLeft,
   AsideRight,
   BoxInput,
   BoxStatus,
+  BoxStatusSkeleton,
   Stories
 } from '../components';
 
 const Home = () => {
+  const [loading, setLoading] = useState(false);
+  const [posts, setPosts] = useState([]);
+
+  const getPosts = async () => {
+    setLoading(true);
+    try {
+      const { data } = await axios.get(
+        'https://jsonplaceholder.typicode.com/posts'
+      );
+      setLoading(false);
+      setPosts(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    getPosts();
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -25,12 +47,18 @@ const Home = () => {
               <Stories />
               {/* input status */}
               <BoxInput />
-              {/* statuses */}
-              <BoxStatus />
-              <BoxStatus />
-              <BoxStatus />
-              <BoxStatus />
-              <BoxStatus />
+
+              {posts.map((post) =>
+                loading ? (
+                  <BoxStatusSkeleton key={post.id} />
+                ) : (
+                  <BoxStatus
+                    key={post.id}
+                    userId={post.userId}
+                    body={post.body}
+                  />
+                )
+              )}
             </div>
           </div>
           {/* Aside Right */}

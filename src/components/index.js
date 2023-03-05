@@ -10,3 +10,4 @@ export { default as Stories } from './stories/Story';
 export { default as StoryItem } from './stories/StoryItem';
 export { default as BoxInput } from './statuses/BoxInput';
 export { default as BoxStatus } from './statuses/BoxStatus';
+export { default as BoxStatusSkeleton } from './statuses/BoxStatusSkeleton';
