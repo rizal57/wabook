@@ -1,9 +1,14 @@
+import clsx from 'clsx';
 import React from 'react';
 
 const Card = (props) => {
-  const { children } = props;
+  const { children, width = 'w-full' } = props;
   return (
-    <div className="py-3 px-4 rounded-lg bg-white shadow-md w-full mb-4">
+    <div
+      className={clsx(
+        width,
+        'py-3 rounded-lg bg-white shadow-lg mb-4 overflow-hidden'
+      )}>
       {children}
     </div>
   );
@@ -11,17 +16,17 @@ const Card = (props) => {
 
 const Title = (props) => {
   const { children } = props;
-  return <div className="box-between gap-2">{children}</div>;
+  return <div className="box-between gap-2 px-4 relative">{children}</div>;
 };
 
 const Body = (props) => {
   const { children } = props;
-  return <div>{children}</div>;
+  return <div className="px-4 relative">{children}</div>;
 };
 
 const Footer = (props) => {
   const { children } = props;
-  return <div>{children}</div>;
+  return <div className="px-4">{children}</div>;
 };
 
 Card.Title = Title;

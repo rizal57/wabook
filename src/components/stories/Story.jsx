@@ -77,7 +77,7 @@ const Story = () => {
                 <AiOutlineLeft />
               </button> */}
               {/* right arrow */}
-              <button className="absolute top-[50%] -translate-y-[50%] right-4 w-[45px] h-[45px] box-center rounded-full bg-gray-50 hover:bg-gray-100 z-50">
+              <button className="absolute top-[50%] -translate-y-[50%] right-4 w-[45px] h-[45px] box-center rounded-full bg-gray-50 hover:bg-gray-100 z-20">
                 <AiOutlineRight />
               </button>
             </div>

@@ -5,25 +5,25 @@ import { FaFacebookMessenger } from 'react-icons/fa';
 import ButtonCircle from '../ButtonCircle';
 
 const RightItem = () => {
-  const icons = [
-    {
-      icon: BsFillGridFill
-    },
-    {
-      icon: FaFacebookMessenger
-    },
-    {
-      icon: AiFillBell
-    }
-  ];
   return (
     <nav className="box-end gap-4">
       <div className="box-center gap-2">
-        {icons.map((icon) => (
-          <ButtonCircle key={icon.icon}>
-            <icon.icon size={20} />
-          </ButtonCircle>
-        ))}
+        <ButtonCircle>
+          <BsFillGridFill size={20} />
+        </ButtonCircle>
+        <ButtonCircle overflow="overflow-visible">
+          <div className="w-[20px] h-[20px] rounded-full bg-red-500 text-gray-50 absolute -top-[5px] -right-[5px] box-center text-xs">
+            9
+          </div>
+          <FaFacebookMessenger size={20} />
+        </ButtonCircle>
+        <ButtonCircle overflow="overflow-visible">
+          <div className="w-[20px] h-[20px] rounded-full bg-red-500 text-gray-50 absolute -top-[5px] -right-[5px] box-center text-xs">
+            9
+          </div>
+          <AiFillBell size={20} />
+        </ButtonCircle>
+
         <ButtonCircle>
           <img
             src="https://picsum.photos/200"

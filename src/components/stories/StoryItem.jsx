@@ -8,17 +8,17 @@ const StoryItem = (props) => {
     <>
       <Link className="h-[200px] rounded-lg overflow-hidden object-cover bg-cover cursor-pointer group relative shadow-md">
         {/* overlay */}
-        <div className="bg-gray-900 absolute inset-x-0 inset-y-0 opacity-0 group-hover:opacity-10 z-40" />
+        <div className="bg-gray-900 absolute inset-x-0 inset-y-0 opacity-0 group-hover:opacity-10 z-10" />
         {/* profile image */}
         {state === 'Cerita' ? (
           <>
             {/* circle */}
-            <div className="w-[10px] h-[10px] rounded-full bg-green-500 absolute top-10 left-10 border-[2px] border-gray-100 z-50" />
+            <div className="w-[10px] h-[10px] rounded-full bg-green-500 absolute top-10 left-10 border-[2px] border-gray-100 z-20" />
 
             <img
               src={profileImage}
               alt="profileImage"
-              className="w-[40px] h-[40px] rounded-full absolute top-3 left-3 z-40 border-blue-500 border-4"
+              className="w-[40px] h-[40px] rounded-full absolute top-3 left-3 z-10 border-blue-500 border-4"
             />
           </>
         ) : null}

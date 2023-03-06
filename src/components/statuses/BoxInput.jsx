@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdPhotoLibrary } from 'react-icons/md';
 import { TbDeviceComputerCamera } from 'react-icons/tb';
 import Card from '../Card';
 import Line from '../Line';
+import PopupInput from './PopupInput';
 
 const BoxInput = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+
   return (
     <Card>
       <Card.Body>
@@ -18,10 +21,17 @@ const BoxInput = () => {
               className="object-cover w-[40px] h-[40px] rounded-full group-hover:brightness-[.9]"
             />
           </Link>
-          <button className="py-2 px-4 rounded-full w-full bg-gray-100 text-gray-500 hover:bg-gray-200 text-start">
+          <button
+            onClick={() => setOpenPopup(true)}
+            className="py-2 px-4 rounded-full w-full bg-gray-100 text-gray-500 hover:bg-gray-200 text-start">
             Apa yang Anda pikirkan, Rizal?
           </button>
         </div>
+        {openPopup && (
+          <div>
+            <PopupInput close={() => setOpenPopup(false)} />
+          </div>
+        )}
       </Card.Body>
       <Line margin="mt-4" padding="px-0" />
       <Card.Footer>

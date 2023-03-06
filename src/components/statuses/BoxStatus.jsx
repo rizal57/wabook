@@ -18,7 +18,7 @@ const BoxStatus = (props) => {
           <div className="flex gap-2">
             <Link to="/profile" className="flex-shrink-0 group">
               <img
-                src={`https://picsum.photos/2${userId}`}
+                src={`https://picsum.photos/200/300?random=${userId}`}
                 alt="profileImage"
                 className="object-cover w-[40px] h-[40px] rounded-full group-hover:brightness-[.9]"
               />

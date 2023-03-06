@@ -9,26 +9,23 @@ import {
   BoxStatusSkeleton,
   Stories
 } from '../components';
+import { getPosts } from '../endpoint';
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
 
-  const getPosts = async () => {
-    setLoading(true);
-    try {
-      const { data } = await axios.get(
-        'https://jsonplaceholder.typicode.com/posts'
-      );
-      setLoading(false);
-      setPosts(data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
   useEffect(() => {
-    getPosts();
+    setLoading(true);
+    getPosts()
+      .then((post) => {
+        setLoading(false);
+        setPosts(post);
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.log(err);
+      });
   }, []);
 
   return (
